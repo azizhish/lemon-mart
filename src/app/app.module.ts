@@ -9,6 +9,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http'
 import { FlexLayoutModule } from '@angular/flex-layout'
 
+// Services
+import { AuthService } from './auth/auth.service'
+
 @NgModule({
   declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
   imports: [
@@ -19,7 +22,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'
     MaterialModule,
     FlexLayoutModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
