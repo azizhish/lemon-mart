@@ -11,9 +11,10 @@ import { FlexLayoutModule } from '@angular/flex-layout'
 
 // Services
 import { AuthService } from './auth/auth.service'
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
+  declarations: [AppComponent, HomeComponent, PageNotFoundComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

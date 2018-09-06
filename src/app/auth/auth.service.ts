@@ -6,6 +6,7 @@ import { BehaviorSubject, Observable, of, throwError as observableThrowError } f
 import { catchError, map } from 'rxjs/operators'
 import { environment } from '../../environments/environment'
 import { Role } from './role.enum'
+import { transformError } from '../common/common'
 
 @Injectable({
   providedIn: 'root',
@@ -43,6 +44,11 @@ export class AuthService {
     )
     return loginResponse
   }
+
+  logout() {
+    this.authStatus.next(defaultAuthStatus)
+  }
+
   private fakeAuthProvider(
     email: string,
     password: string
